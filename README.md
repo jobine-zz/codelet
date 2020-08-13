@@ -39,8 +39,8 @@ Generate PostgreSql script for updating applications's parameters.
 #### Example
     from codelet.app import AppEE
     
-    api_key = '<Your api key here'
-    app_uuid = 'Your application uuid here'
+    api_key = '<Your api key here>'
+    app_uuid = '<Your application UUID here>'
     
     appEE = AppEE(service='stock-exp3', api_key=api_key)
     appEE.sql_insert_final(app_id)
@@ -57,8 +57,8 @@ Generate PostgreSql script for inserting application.
 
     from codelet.app import AppEE
     
-    api_key = '<Your api key here'
-    app_uuid = 'Your application uuid here'
+    api_key = '<Your api key here>'
+    app_uuid = '<Your application UUID here>'
     
     appEE = AppEE(service='stock-exp3', api_key=api_key)
     appEE.sql_update_parameters(app_id)
