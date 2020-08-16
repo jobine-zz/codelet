@@ -15,7 +15,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="codelet",
-    version="1.0.2",
+    version="1.0.5",
     description="Codelet for Engineer Excellence",
     license="MIT Licence",
     url="https://github.com/Azure",

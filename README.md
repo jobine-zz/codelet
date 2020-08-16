@@ -30,31 +30,13 @@ This class contains a bunch of methods to generate useful codelets for Time Seri
 
 ### def sql_update_parameters(self, app_uuid):
 
-Generate PostgreSql script for updating applications's parameters.
+Generate PostgreSql script for updating application's parameters.
 
 #### Parameters
 
     <app_uuid> The uuid of the applicatoin to generate.
     
 #### Example
-    from codelet.app import AppEE
-    
-    api_key = '<Your api key here>'
-    app_uuid = '<Your application UUID here>'
-    
-    appEE = AppEE(service='stock-exp3', api_key=api_key)
-    appEE.sql_insert_final(app_id)
-
-### def sql_insert_final(self, app_uuid)
-
-Generate PostgreSql script for inserting application.
-
-#### Parameters
-
-    <app_uuid> The uuid of the applicatoin to generate.
-
-#### Example
-
     from codelet.app import AppEE
     
     api_key = '<Your api key here>'
@@ -62,3 +44,42 @@ Generate PostgreSql script for inserting application.
     
     appEE = AppEE(service='stock-exp3', api_key=api_key)
     appEE.sql_update_parameters(app_id)
+
+### def sql_insert_final(self, app_uuid)
+
+Generate PostgreSql script for inserting the application.
+
+#### Parameters
+
+    <app_uuid> The uuid of the applicatoin to generate.
+
+#### Example
+
+    from codelet.app import AppEE
+    
+    api_key = '<Your api key here>'
+    app_uuid = '<Your application UUID here>'
+    
+    appEE = AppEE(service='stock-exp3', api_key=api_key)
+    appEE.sql_insert_final(app_id)
+    
+### def sql_insert_all(self, only_public=True)
+
+Generate Postgresql script for inserting all applications. 
+
+>[!Note]
+>Before running this method, the caller should have super user permission.
+
+#### Parameters
+    <only_public> The boolean value stands for export only public applications or both public and private. The default value is True.
+    
+#### Example
+
+    from codelet.app import AppEE
+    
+    api_key = '<Your api key here>'
+    app_uuid = '<Your application UUID here>'
+    
+    appEE = AppEE(service='stock-exp3', api_key=api_key)
+    appEE.sql_insert_all()
+    
