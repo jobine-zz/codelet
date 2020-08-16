@@ -37,7 +37,7 @@ Generate PostgreSql script for updating application's parameters.
     <app_uuid> The uuid of the applicatoin to generate.
     
 #### Example
-    from codelet.app import AppEE
+    from codelet.app_ee import AppEE
     
     api_key = '<Your api key here>'
     app_uuid = '<Your application UUID here>'
@@ -55,7 +55,7 @@ Generate PostgreSql script for inserting the application.
 
 #### Example
 
-    from codelet.app import AppEE
+    from codelet.app_ee import AppEE
     
     api_key = '<Your api key here>'
     app_uuid = '<Your application UUID here>'
@@ -75,7 +75,7 @@ Generate Postgresql script for inserting all applications.
     
 #### Example
 
-    from codelet.app import AppEE
+    from codelet.app_ee import AppEE
     
     api_key = '<Your api key here>'
     app_uuid = '<Your application UUID here>'
